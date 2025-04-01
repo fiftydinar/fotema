@@ -44,6 +44,18 @@ impl Scanner {
             String::from("qoi"),
             String::from("tiff"),
             String::from("webp"),
+            // RAW file formats
+            // String::from("arw"), // Failed to load
+            // String::from("cr2"), // renders strangely
+            String::from("dng"),
+            // String::from("erf"), // Loads tiny preview instead of full image
+            String::from("mrw"),
+            String::from("nef"),
+            String::from("orf"),
+            String::from("pef"),
+            String::from("raf"),
+            String::from("raw"),
+            String::from("rw2"),
         ];
 
         WalkDir::new(&self.scan_base)

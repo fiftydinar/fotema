@@ -2,6 +2,7 @@
     "buildsystem": "meson",
     "config-opts": [
         "-Dglycin-loaders=true",
+        "-Dloaders=glycin-heif,glycin-image-rs,glycin-jxl,glycin-raw,glycin-svg",
         "-Dlibglycin=false"
     ],
     "modules": [
