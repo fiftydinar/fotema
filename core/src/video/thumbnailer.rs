@@ -54,7 +54,7 @@ impl VideoThumbnailer {
                 .thumbnailer
                 .write_failed_thumbnail(&host_path, sandbox_path);
 
-            anyhow::bail!("FFMpeg exited with status {:?}", status.code());
+            anyhow::bail!("FFMPEG exited with status {:?}", status.code());
         }
 
         let src_image = ImageReader::open(&temporary_png_file)?
