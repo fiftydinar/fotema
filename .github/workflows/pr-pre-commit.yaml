@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: © 2026 David Bliss
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+name: PR pre-commit
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-python@v6
+    - name: Create src/config.rs for rustfmt
+      run: touch src/config.rs
+    - uses: pre-commit/action@v3.0.1
